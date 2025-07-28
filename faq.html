@@ -1,27 +1,153 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>FAQ | ittromaa</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* FAQ container flex */
+    .faq-container {
+      display: flex;
+      max-width: 1100px;
+      margin: 2rem auto;
+      gap: 3rem;
+      padding: 0 1rem;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    /* FAQ list styles */
+    .faq-list {
+      flex: 1 1 550px;
+      text-align: left;
+    }
+
+    .faq-item {
+      margin-bottom: 2rem;
+    }
+
+    .faq-item h2 {
+      color: #b8860b; /* dark gold */
+      font-size: 1.4rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .faq-item p {
+      font-size: 1rem;
+      color: #333;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .faq-item a {
+      color: #b8860b;
+      text-decoration: underline;
+    }
+
+    .faq-item a:hover {
+      color: #000;
+      text-decoration: none;
+    }
+
+    /* Right side image */
+    .faq-image {
+      flex: 0 0 400px;
+      max-width: 400px;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 100%;
+      height: auto;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .faq-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .faq-image {
+        max-width: 90%;
+        margin-top: 2rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <nav>...</nav>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="lookbook.html">Lookbook</a></li>
+      <li><a href="faq.html" class="active">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
   <section class="content">
-    <h1>Frequently Asked Questions</h1>
-    <h3>What materials are used?</h3>
-    <p>Our bags are made from premium cruelty-free vegan leather.</p>
+    <h1 class="title">Frequently Asked Questions</h1>
 
-    <h3>Where do you ship?</h3>
-    <p>Currently shipping to USA and Canada. Expanding to India soon.</p>
+    <div class="faq-container">
+      <div class="faq-list">
+        <div class="faq-item">
+          <h2>Where to buy ittromaa products?</h2>
+          <p>You can purchase ittromaa bags conveniently on <a href="https://www.amazon.com/s?rh=n%3A7141123011%2Cp_4%3Aittromaa" target="_blank" rel="noopener noreferrer">Amazon USA</a> and <a href="https://www.amazon.ca/ittromaa-Timeless-Shoulder-Top-Handle-Crossbody/dp/B0DD2M8HH7" target="_blank" rel="noopener noreferrer">Amazon Canada</a>.</p>
+        </div>
 
-    <h3>How do I buy?</h3>
-    <p>Shop via Amazon USA or Amazon Canada using the links provided.</p>
+        <div class="faq-item">
+          <h2>What is the material and quality of ittromaa bags?</h2>
+          <p>Our bags are crafted from the highest quality microfiber material with a soft cotton lining and premium hardware. Designed for durability, ittromaa bags are long-lasting while maintaining an elegant look.</p>
+        </div>
+
+        <div class="faq-item">
+          <h2>What is the return policy?</h2>
+          <p>All ittromaa products are eligible for return according to Amazon’s return policy. Please refer to Amazon’s official return guidelines for detailed instructions.</p>
+        </div>
+
+        <div class="faq-item">
+          <h2>How are ittromaa bags better than others?</h2>
+          <p>Every ittromaa bag is designed in-house in Canada with meticulous attention to detail. We focus on quality materials and craftsmanship, and all our products are 100% vegan, with no use of animal-derived materials.</p>
+        </div>
+
+        <div class="faq-item">
+          <h2>Why choose vegan?</h2>
+          <p>Choosing vegan products means supporting cruelty-free fashion that does not rely on animal materials. Vegan bags from ittromaa provide a sustainable, ethical alternative without compromising on style, quality, or durability—helping protect animals and reduce environmental impact.</p>
+        </div>
+
+        <div class="faq-item">
+          <h2>Are ittromaa bags waterproof or water-resistant?</h2>
+          <p>Our microfiber material offers a degree of water resistance, helping protect your bag from light rain and spills. However, we recommend avoiding heavy exposure to water to maintain the bag’s quality.</p>
+        </div>
+
+        <div class="faq-item">
+          <h2>How do I care for and clean my ittromaa bag?</h2>
+          <p>To keep your bag looking new, wipe it gently with a damp cloth and mild soap when needed. Avoid harsh chemicals or soaking the bag. For stubborn stains, spot clean and allow it to air dry naturally.</p>
+        </div>
+
+        <div class="faq-item">
+          <h2>Do you offer warranties on ittromaa products?</h2>
+          <p>We stand behind the quality of our bags. Please check the product details or contact us directly for information about warranty coverage and support.</p>
+        </div>
+
+        <div class="faq-item">
+          <h2>Can I find ittromaa bags in physical retail stores?</h2>
+          <p>Currently, ittromaa bags are primarily sold online through Amazon USA and Amazon Canada. We’re exploring retail partnerships and will update customers when new locations become available.</p>
+        </div>
+
+        <div class="faq-item">
+          <h2>Are ittromaa bags suitable for everyday use?</h2>
+          <p>Absolutely! Our bags are designed for durability and style, perfect for everyday wear whether you’re heading to work, errands, or social outings.</p>
+        </div>
+      </div>
+
+      <img src="images/faq-side-image.jpg" alt="Ittromaa Handbag" class="faq-image" />
+    </div>
   </section>
 
-  <footer>...</footer>
+  <footer>
+    <p>&copy; 2024-2025 ittromaa. All rights reserved.</p>
+  </footer>
 </body>
 </html>
