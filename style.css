@@ -3,7 +3,7 @@ body {
   margin: 0;
   font-family: 'Helvetica Neue', sans-serif;
   color: #333;
-  background-color: #f8f8f8; /* off-white / silver */
+  background-color: #f9f9f9; /* off-white */
 }
 
 /* Navigation bar */
@@ -23,19 +23,19 @@ nav ul {
 }
 
 nav a {
-  color: #fff;            /* white links */
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: #000;            /* black on hover */
+  color: #000;
 }
 
 nav a.active {
-  text-decoration: underline;
   color: #000;
+  text-decoration: underline;
 }
 
 /* Slideshow styling */
@@ -49,7 +49,6 @@ nav a.active {
 
 .slide-track {
   display: flex;
-  width: calc(220px * 16 + 2rem * 15); /* width for 16 images + gaps */
   animation: scroll 40s linear infinite;
   gap: 2rem;
 }
@@ -58,28 +57,30 @@ nav a.active {
   height: 220px;
   border-radius: 10px;
   object-fit: cover;
-  flex-shrink: 0;
 }
 
 @keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-220px * 8 - 2rem * 8)); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* Brand and slogan */
 .brand-name {
-  font-size: 4rem;      /* bigger */
+  font-size: 4rem;
   font-weight: 800;
   letter-spacing: 2px;
-  color: #b8860b;       /* dark gold */
+  color: #b8860b; /* dark gold */
   margin-bottom: 0.3rem;
-  text-transform: lowercase;
   text-align: center;
 }
 
 .title {
-  color: #b8860b;       /* dark gold */
-  font-size: 2rem;      /* smaller */
+  color: #8c6d02; /* a bit darker gold */
+  font-size: 2rem;
   text-align: center;
   margin: 0 0 1rem;
 }
@@ -143,70 +144,4 @@ footer {
   background: #f5f5f5;
   font-size: 0.9rem;
   color: #666;
-}
-
-/* FAQ page styles */
-
-.faq-container {
-  display: flex;
-  max-width: 1100px;
-  margin: 2rem auto;
-  gap: 3rem;
-  padding: 0 1rem;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-
-.faq-list {
-  flex: 1 1 550px;
-  text-align: left;
-}
-
-.faq-item {
-  margin-bottom: 2rem;
-}
-
-.faq-item h2 {
-  color: #b8860b; /* dark gold */
-  font-size: 1.4rem;
-  margin-bottom: 0.4rem;
-}
-
-.faq-item p {
-  font-size: 1rem;
-  color: #333;
-  line-height: 1.5;
-  margin: 0;
-}
-
-.faq-item a {
-  color: #b8860b;
-  text-decoration: underline;
-}
-
-.faq-item a:hover {
-  color: #000;
-  text-decoration: none;
-}
-
-.faq-image {
-  flex: 0 0 400px;
-  max-width: 400px;
-  border-radius: 10px;
-  object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  width: 100%;
-  height: auto;
-}
-
-/* Responsive for smaller screens */
-@media (max-width: 768px) {
-  .faq-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .faq-image {
-    max-width: 90%;
-    margin-top: 2rem;
-  }
 }
