@@ -1,21 +1,101 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About | ittromaa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us | ittromaa</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .about-container {
+      display: flex;
+      max-width: 1100px;
+      margin: 2rem auto;
+      gap: 3rem;
+      padding: 0 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .about-text {
+      flex: 1 1 550px;
+      text-align: left;
+      color: #333;
+    }
+
+    .about-text h1 {
+      color: #b8860b;
+      margin-bottom: 1rem;
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: lowercase;
+    }
+
+    .about-text p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-image {
+      flex: 0 0 400px;
+      max-width: 400px;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 100%;
+      height: auto;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .about-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .about-image {
+        max-width: 90%;
+        margin-top: 2rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <nav>...</nav>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="lookbook.html">Lookbook</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
   <section class="content">
-    <h1>About ittromaa</h1>
-    <p>ittromaa is a Canadian brand offering sustainable vegan leather handbags. Designed for elegance, crafted with care, and created for global citizens.</p>
-    <p>Currently available in the USA and Canada via Amazon, with expansion planned for India and beyond.</p>
+    <div class="about-container">
+      <div class="about-text">
+        <h1>ittromaa</h1>
+        <p>
+          In the vibrant heart of Vancouver, Canada, during a sunny spring when flowers were bursting into bloom, Ittromaa was born. Inspired by the stunning colors of nature and the desire for fresh, modern style, our founder noticed a gap in the North American handbag market — a need for thoughtfully designed, elegant bags that reflected the spirit of today’s conscious, sophisticated woman.
+        </p>
+        <p>
+          What began as a simple idea soon blossomed into a passionate journey. From deep market research to understand what truly matters, to countless sketches capturing beauty and function in perfect harmony, every step was crafted with care. Designing each handbag with purpose and soul, we meticulously moved through sampling and collaboration with trusted manufacturers, always holding quality and ethics at the core.
+        </p>
+        <p>
+          Ittromaa isn’t just about handbags — it’s about empowering women with timeless pieces that celebrate style, sustainability, and innovation. Each bag reflects a commitment to excellence, vegan craftsmanship, and an enduring love for modern elegance.
+        </p>
+        <p>
+          Join us in unraveling your inner style — where beauty meets conscience, and every detail tells a story.
+        </p>
+      </div>
+      <!-- Replace src below with your actual image path -->
+      <img src="images/about-side-image.jpg" alt="Ittromaa Handbag Story" class="about-image" />
+    </div>
   </section>
 
-  <footer>...</footer>
+  <footer>
+    <p>&copy; 2024-2025 ittromaa. All rights reserved.</p>
+  </footer>
 </body>
 </html>
