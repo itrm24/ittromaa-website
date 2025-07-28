@@ -26,6 +26,7 @@ nav a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
@@ -59,12 +60,11 @@ nav a:hover {
 }
 
 /* Brand and slogan */
-.brand-name {
-  font-size: 3rem;
-  font-weight: 800;
-  letter-spacing: 2px;
-  color: #111;
-  margin-bottom: 0.5rem;
+.brand-name img {
+  max-height: 80px;       /* limits logo height */
+  width: auto;            /* maintain aspect ratio */
+  display: block;
+  margin: 0 auto 1rem;    /* center and space below */
 }
 
 .title {
@@ -90,6 +90,7 @@ nav a:hover {
   border-radius: 5px;
   text-decoration: none;
   display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .cta-buttons a:hover {
