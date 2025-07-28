@@ -3,7 +3,7 @@ body {
   margin: 0;
   font-family: 'Helvetica Neue', sans-serif;
   color: #333;
-  background-color: #fff;
+  background-color: #f5f5f7; /* light gray / silver */
 }
 
 /* Navigation bar */
@@ -44,7 +44,8 @@ nav a:hover {
 
 .slide-track {
   display: flex;
-  animation: scroll 25s linear infinite;
+  width: calc(220px * 16 + 2rem * 15); /* width for 16 images + gaps */
+  animation: scroll 40s linear infinite;
   gap: 2rem;
 }
 
@@ -52,19 +53,23 @@ nav a:hover {
   height: 220px;
   border-radius: 10px;
   object-fit: cover;
+  flex-shrink: 0;
 }
 
 @keyframes scroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
+  100% { transform: translateX(calc(-220px * 8 - 2rem * 8)); }
 }
 
 /* Brand and slogan */
-.brand-name img {
-  max-height: 80px;       /* limits logo height */
-  width: auto;            /* maintain aspect ratio */
-  display: block;
-  margin: 0 auto 1rem;    /* center and space below */
+.brand-name {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #111;
+  margin-bottom: 0.5rem;
+  text-transform: lowercase;
+  text-align: center;
 }
 
 .title {
