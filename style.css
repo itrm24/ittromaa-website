@@ -3,12 +3,12 @@ body {
   margin: 0;
   font-family: 'Helvetica Neue', sans-serif;
   color: #333;
-  background-color: #f5f5f7; /* light gray / silver */
+  background-color: #f8f8f8; /* off-white / silver */
 }
 
 /* Navigation bar */
 nav {
-  background-color: #000;
+  background-color: #b8860b; /* dark gold */
   padding: 1rem;
 }
 
@@ -16,21 +16,21 @@ nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.2rem; /* tighter spacing */
   margin: 0;
   padding: 0;
   flex-wrap: wrap;
 }
 
 nav a {
-  color: #fff;
+  color: #b8860b; /* dark gold */
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: #f0c040;
+  color: #000; /* black on hover */
 }
 
 /* Slideshow styling */
@@ -63,18 +63,18 @@ nav a:hover {
 
 /* Brand and slogan */
 .brand-name {
-  font-size: 3rem;
+  font-size: 4rem;      /* bigger */
   font-weight: 800;
   letter-spacing: 2px;
-  color: #111;
-  margin-bottom: 0.5rem;
+  color: #b8860b;       /* dark gold */
+  margin-bottom: 0.3rem;
   text-transform: lowercase;
   text-align: center;
 }
 
 .title {
-  color: #b8860b; /* Dark gold */
-  font-size: 2.5rem;
+  color: #b8860b;       /* dark gold */
+  font-size: 2rem;      /* smaller */
   text-align: center;
   margin: 0 0 1rem;
 }
