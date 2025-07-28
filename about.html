@@ -6,56 +6,110 @@
   <title>About Us | ittromaa</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    .about-container {
+    /* Full page background with blur */
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      color: #fff;
+      background: url('images/about-side-image.jpg') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    /* Overlay with blur */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.4); /* dark overlay for contrast */
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      z-index: 0;
+    }
+
+    nav {
+      position: relative; /* so it is above overlay */
+      background-color: rgba(184, 134, 11, 0.9); /* semi-transparent dark gold */
+      padding: 1rem;
+      z-index: 1;
+    }
+
+    nav ul {
+      list-style: none;
       display: flex;
-      max-width: 1100px;
-      margin: 2rem auto;
-      gap: 3rem;
-      padding: 0 1rem;
+      justify-content: center;
+      gap: 1.2rem;
+      margin: 0;
+      padding: 0;
       flex-wrap: wrap;
-      align-items: center;
     }
 
-    .about-text {
-      flex: 1 1 550px;
-      text-align: left;
-      color: #333;
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+      position: relative;
+      z-index: 2;
     }
 
-    .about-text h1 {
-      color: #b8860b;
+    nav a:hover {
+      color: #000;
+    }
+
+    nav a.active {
+      text-decoration: underline;
+      color: #000;
+    }
+
+    .content {
+      position: relative; /* so above overlay */
+      max-width: 900px;
+      margin: 4rem auto 3rem;
+      padding: 2rem;
+      background-color: rgba(0, 0, 0, 0.45); /* dark transparent box for readability */
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+      z-index: 1;
+      color: #f5f5dc; /* light beige */
+    }
+
+    .content h1 {
+      color: #f0c040; /* golden */
       margin-bottom: 1rem;
-      font-size: 2.5rem;
+      font-size: 3rem;
       font-weight: 800;
       letter-spacing: 1.5px;
       text-transform: lowercase;
+      text-align: center;
     }
 
-    .about-text p {
-      font-size: 1.1rem;
+    .content p {
+      font-size: 1.2rem;
       line-height: 1.7;
       margin-bottom: 1.5rem;
+      text-align: left;
     }
 
-    .about-image {
-      flex: 0 0 400px;
-      max-width: 400px;
-      border-radius: 10px;
-      object-fit: cover;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      width: 100%;
-      height: auto;
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: rgba(0,0,0,0.7);
+      color: #ddd;
+      position: relative;
+      z-index: 1;
     }
 
     /* Responsive */
     @media (max-width: 768px) {
-      .about-container {
-        flex-direction: column;
-        align-items: center;
+      .content {
+        margin: 2rem 1rem;
+        padding: 1.5rem;
       }
-      .about-image {
-        max-width: 90%;
-        margin-top: 2rem;
+
+      .content h1 {
+        font-size: 2.2rem;
       }
     }
   </style>
@@ -73,25 +127,19 @@
   </nav>
 
   <section class="content">
-    <div class="about-container">
-      <div class="about-text">
-        <h1>ittromaa</h1>
-        <p>
-          In the vibrant heart of Vancouver, Canada, during a sunny spring when flowers were bursting into bloom, Ittromaa was born. Inspired by the stunning colors of nature and the desire for fresh, modern style, our founder noticed a gap in the North American handbag market — a need for thoughtfully designed, elegant bags that reflected the spirit of today’s conscious, sophisticated woman.
-        </p>
-        <p>
-          What began as a simple idea soon blossomed into a passionate journey. From deep market research to understand what truly matters, to countless sketches capturing beauty and function in perfect harmony, every step was crafted with care. Designing each handbag with purpose and soul, we meticulously moved through sampling and collaboration with trusted manufacturers, always holding quality and ethics at the core.
-        </p>
-        <p>
-          Ittromaa isn’t just about handbags — it’s about empowering women with timeless pieces that celebrate style, sustainability, and innovation. Each bag reflects a commitment to excellence, vegan craftsmanship, and an enduring love for modern elegance.
-        </p>
-        <p>
-          Join us in unraveling your inner style — where beauty meets conscience, and every detail tells a story.
-        </p>
-      </div>
-      <!-- Replace src below with your actual image path -->
-      <img src="images/about-side-image.jpg" alt="Ittromaa Handbag Story" class="about-image" />
-    </div>
+    <h1>ittromaa</h1>
+    <p>
+      In the vibrant heart of Vancouver, Canada, during a sunny spring when flowers were bursting into bloom, Ittromaa was born. Inspired by the stunning colors of nature and the desire for fresh, modern style, our founder noticed a gap in the North American handbag market — a need for thoughtfully designed, elegant bags that reflected the spirit of today’s conscious, sophisticated woman.
+    </p>
+    <p>
+      What began as a simple idea soon blossomed into a passionate journey. From deep market research to understand what truly matters, to countless sketches capturing beauty and function in perfect harmony, every step was crafted with care. Designing each handbag with purpose and soul, we meticulously moved through sampling and collaboration with trusted manufacturers, always holding quality and ethics at the core.
+    </p>
+    <p>
+      Ittromaa isn’t just about handbags — it’s about empowering women with timeless pieces that celebrate style, sustainability, and innovation. Each bag reflects a commitment to excellence, vegan craftsmanship, and an enduring love for modern elegance.
+    </p>
+    <p>
+      Join us in unraveling your inner style — where beauty meets conscience, and every detail tells a story.
+    </p>
   </section>
 
   <footer>
