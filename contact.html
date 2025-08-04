@@ -6,6 +6,36 @@
   <title>Contact Us | ittromaa</title>
   <link rel="stylesheet" href="style.css" />
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+
+    nav {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      margin: 0;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
+
+    nav a.active {
+      color: #b8860b;
+    }
+
     .contact-container {
       display: flex;
       max-width: 1100px;
@@ -17,7 +47,7 @@
     }
 
     .contact-form {
-      flex: 1 1 550px;
+      flex: 1 1 500px;
       text-align: left;
       background: #fff;
       padding: 2rem;
@@ -69,26 +99,50 @@
       background-color: #996f00;
     }
 
-    .contact-image {
-      flex: 0 0 400px;
-      max-width: 400px;
+    .contact-info-box {
+      flex: 1 1 400px;
+      background: #fff;
+      padding: 2rem;
       border-radius: 10px;
-      object-fit: cover;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      width: 100%;
-      height: auto;
     }
 
-    /* Responsive */
+    .contact-info-box h2 {
+      color: #b8860b;
+      margin-bottom: 1rem;
+    }
+
+    .contact-info-box p {
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .contact-info-box strong {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      background-color: #fff;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #777;
+      border-top: 1px solid #eee;
+    }
+
     @media (max-width: 768px) {
       .contact-container {
         flex-direction: column;
         align-items: center;
       }
 
-      .contact-image {
-        max-width: 90%;
-        margin-top: 2rem;
+      .contact-form, .contact-info-box {
+        width: 100%;
       }
     }
   </style>
@@ -107,6 +161,7 @@
 
   <section class="content">
     <div class="contact-container">
+      <!-- Contact Form -->
       <form class="contact-form" action="#" method="POST">
         <h1>Contact Us</h1>
 
@@ -125,7 +180,21 @@
         <button type="submit">Send Message</button>
       </form>
 
-      <!-- Replace src with your actual image path -->
+      <!-- Retail / Wholesale Section -->
+      <div class="contact-info-box">
+        <h2>Retail & Wholesale Enquiries</h2>
+        <p>
+          Are you a retailer or wholesaler interested in carrying <strong>Ittromaa</strong> vegan handbags?
+          We'd love to collaborate with boutiques, fashion outlets, and online stores across North America.
+        </p>
+        <p>
+          Get in touch for special B2B pricing, bulk order options, and promotional support.
+        </p>
+        <p>
+          <strong>Phone:</strong> +1 672 978 3548<br/>
+          <strong>Email:</strong> <a href="mailto:ittromaa@gmail.com">ittromaa@gmail.com</a>
+        </p>
+      </div>
     </div>
   </section>
 
