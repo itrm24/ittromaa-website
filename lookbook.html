@@ -140,16 +140,17 @@
 
     <!-- Lightboxes: Videos -->
     <div id="vid1" class="lightbox"><a href="#" class="close">&times;</a>
-      <video class="lightbox-content" controls autoplay><source src="videos/Black-unpacking.MOV" type="video/mp4"></video>
-    </div>
+  <video class="lightbox-content" controls id="video1">
+    <source src="videos/Black-unpacking.MOV" type="video/mp4"></video>
+  </div>
     <div id="vid2" class="lightbox"><a href="#" class="close">&times;</a>
-      <video class="lightbox-content" controls autoplay><source src="videos/Whats in my bag.mov" type="video/mp4"></video>
+      <video class="lightbox-content" controls id="video2"><source src="videos/Whats in my bag.mov" type="video/mp4"></video>
     </div>
     <div id="vid3" class="lightbox"><a href="#" class="close">&times;</a>
-      <video class="lightbox-content" controls autoplay><source src="videos/video3.mp4" type="video/mp4"></video>
+      <video class="lightbox-content" controls id="video3"><source src="videos/video3.mp4" type="video/mp4"></video>
     </div>
     <div id="vid4" class="lightbox"><a href="#" class="close">&times;</a>
-      <video class="lightbox-content" controls autoplay><source src="videos/video4.mp4" type="video/mp4"></video>
+      <video class="lightbox-content" controls id="video4"><source src="videos/video4.mp4" type="video/mp4"></video>
     </div>
 
     <!-- Lightboxes: Images -->
@@ -170,5 +171,30 @@
   <footer>
     &copy; 2025 Ittromaa. All rights reserved.
   </footer>
+  <script>
+  // Pause all lightbox videos on close
+  document.querySelectorAll('.lightbox').forEach(lightbox => {
+    lightbox.querySelector('.close').addEventListener('click', () => {
+      const video = lightbox.querySelector('video');
+      if (video) {
+        video.pause();
+        video.currentTime = 0;
+      }
+    });
+  });
+
+  // Autoplay video when lightbox is opened
+  window.addEventListener('hashchange', () => {
+    const hash = location.hash.replace('#', '');
+    const target = document.getElementById(hash);
+    if (target) {
+      const video = target.querySelector('video');
+      if (video) {
+        video.play();
+      }
+    }
+  });
+</script>
+
 </body>
 </html>
