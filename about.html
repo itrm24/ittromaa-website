@@ -1,125 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Ittromaa Shop</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ittromaa Story | Unravel Your Inner Style</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.counter.dev/script.js"
+          data-id="9af2f9c9-73a4-48f2-ba5f-551194d0207c"
+          data-utcoffset="-4"></script>
+
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fff8f4;
+      background-color: #f7f7f7;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      background-color: #b8860b;
+      padding: 1rem 0;
+    }
+
+    nav ul {
+      list-style: none;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 40px 20px;
-      color: #333;
+      justify-content: center;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
     }
 
-    h1 {
-      font-size: 24px;
+    nav a {
+      color: #fff;
       font-weight: bold;
-      margin-bottom: 30px;
-      height: 40px;
+      text-decoration: none;
+      transition: color 0.3s ease;
     }
 
-    .typewriter-text::after {
-      content: '|';
-      animation: blink 1s step-start infinite;
-      color: #222;
+    nav a:hover,
+    nav a.active {
+      color: #000;
+      text-decoration: underline;
+    }
+
+    .typewriter-container {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    .typewriter-title {
+      font-size: 2.5rem;
+      text-align: center;
+      color: #b8860b;
+      margin-bottom: 2rem;
+    }
+
+    #typewriter-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #333;
+      white-space: pre-wrap;
+    }
+
+    .cursor {
+      display: inline-block;
+      background-color: #333;
+      width: 2px;
+      height: 1.2em;
+      margin-left: 2px;
+      animation: blink 1s infinite;
     }
 
     @keyframes blink {
-      50% { opacity: 0; }
+      0%, 50%, 100% { opacity: 1; }
+      25%, 75% { opacity: 0; }
     }
 
-    .product-section {
-      width: 100%;
-      max-width: 900px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .product-card {
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 10px;
-      width: 200px;
+    footer {
       text-align: center;
-      background-color: white;
-      transition: box-shadow 0.3s ease;
-    }
-
-    .product-card:hover {
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    }
-
-    .product-card img {
-      max-width: 100%;
-      border-radius: 8px;
-    }
-
-    .product-title {
-      font-weight: bold;
-      margin-top: 10px;
-      font-size: 16px;
-    }
-
-    .section-title {
-      font-size: 20px;
-      font-weight: 600;
-      margin: 40px 0 20px;
+      padding: 1rem;
+      background: #f5f5f5;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 4rem;
     }
   </style>
 </head>
 <body>
 
-  <h1><span id="typewriter" class="typewriter-text"></span></h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="lookbook.html">Lookbook</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-  <div class="section-title">Shop for USA</div>
-  <div class="product-section">
-    <div class="product-card">
-      <img src="https://m.media-amazon.com/images/I/61sCgT4avzL._AC_UY1000_.jpg" alt="Night Black">
-      <div class="product-title">Night Black</div>
-    </div>
-    <div class="product-card">
-      <img src="https://m.media-amazon.com/images/I/61Vm+Xxn5LL._AC_UY1000_.jpg" alt="Cherry Red">
-      <div class="product-title">Cherry Red</div>
-    </div>
-    <div class="product-card">
-      <img src="https://m.media-amazon.com/images/I/61mU+e4vMnL._AC_UY1000_.jpg" alt="Walnut Beige">
-      <div class="product-title">Walnut Beige</div>
-    </div>
-    <div class="product-card">
-      <img src="https://m.media-amazon.com/images/I/61S2PRXuoWL._AC_UY1000_.jpg" alt="Graceful Queen - Elegant Brown">
-      <div class="product-title">Graceful Queen - Elegant Brown</div>
-    </div>
-    <div class="product-card">
-      <img src="https://m.media-amazon.com/images/I/71f3eeB5VXL._AC_UY1000_.jpg" alt="Graceful Queen - Ivory Pearl">
-      <div class="product-title">Graceful Queen - Ivory Pearl</div>
-    </div>
-  </div>
+  <section class="typewriter-container">
+    <h1 class="typewriter-title">Ittromaa Story</h1>
+    <div id="typewriter-text"></div><span class="cursor"></span>
+  </section>
 
-  <div class="section-title">Shop for Canada</div>
-  <div class="product-section">
-    <!-- Add Canada's products here -->
-  </div>
+  <footer>
+    <p>&copy; 2024-2025 ittromaa. All rights reserved.</p>
+  </footer>
 
   <script>
-    const text = "Buy Your Designer Handbag — Crafted for Elegance, Made to Inspire";
-    const speed = 25; // milliseconds per letter (adjust 15–40 for faster/slower)
-    let i = 0;
+    const storyParagraphs = [
+      "In the vibrant heart of Vancouver, Canada, during a sunny spring when flowers were bursting into bloom, Ittromaa was born. Inspired by the stunning colors of nature and the desire for fresh, modern style, our founder noticed a gap in the North American handbag market — a need for thoughtfully designed, elegant bags that reflected the spirit of today’s conscious, sophisticated woman.",
+      "What began as a simple idea soon blossomed into a passionate journey. From deep market research to understand what truly matters, to countless sketches capturing beauty and function in perfect harmony, every step was crafted with care.",
+      "Designing each handbag with purpose and soul, we meticulously moved through sampling and collaboration with trusted manufacturers, always holding quality and ethics at the core.",
+      "Join us in unraveling your inner style — where beauty meets conscience, and every detail tells a story."
+    ];
 
-    function typeWriter() {
-      if (i < text.length) {
-        document.getElementById("typewriter").innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
+    const textElement = document.getElementById("typewriter-text");
+    let paragraphIndex = 0;
+    let charIndex = 0;
+
+    function type() {
+      if (paragraphIndex < storyParagraphs.length) {
+        const currentParagraph = storyParagraphs[paragraphIndex];
+        if (charIndex < currentParagraph.length) {
+          textElement.textContent += currentParagraph.charAt(charIndex);
+          charIndex++;
+          setTimeout(type, 18); // Typing speed
+        } else {
+          textElement.textContent += '\n\n'; // Paragraph break
+          paragraphIndex++;
+          charIndex = 0;
+          setTimeout(type, 500); // Pause before next paragraph
+        }
       }
     }
 
-    window.onload = typeWriter;
+    window.onload = type;
   </script>
-
 </body>
 </html>
