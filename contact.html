@@ -9,31 +9,31 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #f8f8f8;
+      background-color: #f9f9f9;
     }
 
     nav {
-      background-color: #333;
-      padding: 1rem;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
     nav ul {
       list-style: none;
       display: flex;
-      gap: 1rem;
       justify-content: center;
+      padding: 1rem;
       margin: 0;
-      padding: 0;
+      gap: 2rem;
     }
 
     nav a {
-      color: white;
       text-decoration: none;
-      font-weight: bold;
+      color: #333;
+      font-weight: 600;
     }
 
     nav a.active {
-      text-decoration: underline;
+      color: #b8860b;
     }
 
     .contact-container {
@@ -46,17 +46,16 @@
       align-items: flex-start;
     }
 
-    .contact-form,
-    .retail-box {
+    .contact-form {
       flex: 1 1 500px;
+      text-align: left;
       background: #fff;
       padding: 2rem;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
-    .contact-form h1,
-    .retail-box h2 {
+    .contact-form h1 {
       color: #b8860b;
       margin-bottom: 1rem;
     }
@@ -100,29 +99,50 @@
       background-color: #996f00;
     }
 
-    .retail-box p {
-      line-height: 1.6;
-      font-size: 1rem;
-      color: #333;
+    .contact-info-box {
+      flex: 1 1 400px;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
-    .retail-box strong {
+    .contact-info-box h2 {
+      color: #b8860b;
+      margin-bottom: 1rem;
+    }
+
+    .contact-info-box p {
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .contact-info-box strong {
       display: block;
-      margin-top: 1rem;
-      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #000;
     }
 
     footer {
       text-align: center;
-      padding: 1rem;
-      background-color: #333;
-      color: white;
+      padding: 1rem 0;
+      background-color: #fff;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #777;
+      border-top: 1px solid #eee;
     }
 
-    /* Responsive */
     @media (max-width: 768px) {
       .contact-container {
         flex-direction: column;
+        align-items: center;
+      }
+
+      .contact-form, .contact-info-box {
+        width: 100%;
       }
     }
   </style>
@@ -141,7 +161,7 @@
 
   <section class="content">
     <div class="contact-container">
-      <!-- Left: Contact Form -->
+      <!-- Contact Form -->
       <form class="contact-form" action="#" method="POST">
         <h1>Contact Us</h1>
 
@@ -160,22 +180,20 @@
         <button type="submit">Send Message</button>
       </form>
 
-      <!-- Right: Retail/Wholesale Info -->
-      <div class="retail-box">
-        <h2>Retail & Wholesale Enquiry</h2>
+      <!-- Retail / Wholesale Section -->
+      <div class="contact-info-box">
+        <h2>Retail & Wholesale Enquiries</h2>
         <p>
-          We welcome all retail and wholesale inquiries! If you're a boutique, online store, or distributor looking to collaborate with us, we'd love to hear from you.
+          Are you a retailer or wholesaler interested in carrying <strong>Ittromaa</strong> vegan handbags?
+          We'd love to collaborate with boutiques, fashion outlets, and online stores across North America.
         </p>
         <p>
-          Our handbags are designed with elegance and crafted using high-quality vegan materials, perfect for fashion-conscious consumers.
+          Get in touch for special B2B pricing, bulk order options, and promotional support.
         </p>
         <p>
-          Whether you’re interested in bulk purchases or exclusive partnership opportunities, we are open to exploring possibilities together.
+          <strong>Phone:</strong> +1 672 978 3548<br/>
+          <strong>Email:</strong> <a href="mailto:ittromaa@gmail.com">ittromaa@gmail.com</a>
         </p>
-        <strong>Contact Number:</strong>
-        <p>📞 +1 672 978 3548</p>
-        <strong>Email:</strong>
-        <p>📧 ittromaa@gmail.com</p>
       </div>
     </div>
   </section>
