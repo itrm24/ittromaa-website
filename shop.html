@@ -1,31 +1,232 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shop | Ittromaa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shop | ittromaa</title>
   <link rel="stylesheet" href="style.css" />
+  
+  <!-- Counter.dev Tracking Script -->
+  <script src="https://cdn.counter.dev/script.js" 
+          data-id="9af2f9c9-73a4-48f2-ba5f-551194d0207c" 
+          data-utcoffset="-4"></script>
+
+  <style>
+    /* Navigation bar */
+    nav {
+      background-color: #b8860b; /* golden */
+      padding: 1rem 0;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #000;
+    }
+
+    nav a.active {
+      color: #000;
+      text-decoration: underline;
+    }
+
+    /* Page content container */
+    .content {
+      max-width: 1100px;
+      margin: 2rem auto 4rem;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    .content h1 {
+      font-size: 3rem;
+      color: #b8860b;
+      margin-bottom: 2rem;
+      text-transform: lowercase;
+      letter-spacing: 1.5px;
+    }
+
+    /* Product grid */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2.5rem;
+      padding-bottom: 2rem;
+    }
+
+    /* Each product card */
+    .product-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    }
+
+    .product-card img {
+      max-width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .product-info {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .product-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 0.4rem;
+      text-transform: capitalize;
+    }
+
+    .product-color {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+
+    .product-link {
+      display: inline-block;
+      background-color: #b8860b;
+      color: #fff;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+    }
+
+    .product-link:hover {
+      background-color: #996f00;
+      color: #fff;
+    }
+
+    /* Responsive for smaller devices */
+    @media (max-width: 600px) {
+      .product-card img {
+        height: 180px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <nav>...</nav>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="shop.html" class="active">Shop</a></li>
+      <li><a href="lookbook.html">Lookbook</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
   <section class="content">
-    <h1>Shop Our Collection</h1>
-    <div class="product-gallery">
-      <div class="product">
-        <img src="images/bag1.jpg" alt="Bag 1">
-        <p>Elegant Tote</p>
-        <a href="https://www.amazon.com/s?k=ittromaa" target="_blank">Buy Now</a>
+    <h1>Shop ittromaa</h1>
+    <div class="product-grid">
+
+      <!-- Product 1: Cherry Red -->
+      <div class="product-card">
+        <img src="images/model1.jpg" alt="Cherry Red Handbag" />
+        <div class="product-info">
+          <div class="product-title">Timeless Shoulder Bag</div>
+          <div class="product-color">Cherry Red</div>
+          <a href="https://www.amazon.com/Timeless-Shoulder-Versatile-Crossbody-ittromaa/dp/B0DD2MCDFF/ref=sr_1_1?dib=eyJ2IjoiMSJ9.vEL42r8zpJBaS7FC5_wlqD8zhY-Gn77qPHjhX5pFOAg.7qwiDaMvzfLJi_zaPBLG0P7OWZCduRDimrXXb72bGq4&dib_tag=se&qid=1753845298&refinements=p_4%3Aittromaa&s=apparel&sr=1-1&th=1" target="_blank" class="product-link" rel="noopener noreferrer">Shop on Amazon USA</a>
+        </div>
       </div>
-      <div class="product">
-        <img src="images/bag2.jpg" alt="Bag 2">
-        <p>Chic Crossbody</p>
-        <a href="https://www.amazon.ca/s?k=ittromaa" target="_blank">Buy Now</a>
+
+      <!-- Product 2: Night Black -->
+      <div class="product-card">
+        <img src="images/model2.jpg" alt="Night Black Handbag" />
+        <div class="product-info">
+          <div class="product-title">Timeless Shoulder Bag</div>
+          <div class="product-color">Night Black</div>
+          <a href="https://www.amazon.com/Timeless-Shoulder-Versatile-Crossbody-ittromaa/dp/B0DCTZX1PW/ref=sr_1_1?dib=eyJ2IjoiMSJ9.vEL42r8zpJBaS7FC5_wlqD8zhY-Gn77qPHjhX5pFOAg.7qwiDaMvzfLJi_zaPBLG0P7OWZCduRDimrXXb72bGq4&dib_tag=se&qid=1753845298&refinements=p_4%3Aittromaa&s=apparel&sr=1-1&th=1" target="_blank" class="product-link" rel="noopener noreferrer">Shop on Amazon USA</a>
+        </div>
       </div>
+
+      <!-- Product 3: Walnut Beige -->
+      <div class="product-card">
+        <img src="images/model3.jpg" alt="Walnut Beige Handbag" />
+        <div class="product-info">
+          <div class="product-title">Timeless Shoulder Bag</div>
+          <div class="product-color">Walnut Beige</div>
+          <a href="https://www.amazon.com/Timeless-Shoulder-Versatile-Crossbody-ittromaa/dp/B0DD2M8HH7/ref=sr_1_1?dib=eyJ2IjoiMSJ9.vEL42r8zpJBaS7FC5_wlqD8zhY-Gn77qPHjhX5pFOAg.7qwiDaMvzfLJi_zaPBLG0P7OWZCduRDimrXXb72bGq4&dib_tag=se&qid=1753845298&refinements=p_4%3Aittromaa&s=apparel&sr=1-1&th=1" target="_blank" class="product-link" rel="noopener noreferrer">Shop on Amazon USA</a>
+        </div>
+      </div>
+
+      <!-- Product 4: Espresso Brown -->
+      <div class="product-card">
+        <img src="images/model4.jpg" alt="Espresso Brown Handbag" />
+        <div class="product-info">
+          <div class="product-title">Timeless Shoulder Bag</div>
+          <div class="product-color">Espresso Brown</div>
+          <a href="https://www.amazon.com/Timeless-Shoulder-Versatile-Crossbody-ittromaa/dp/B0F7H5487J/ref=sr_1_1?dib=eyJ2IjoiMSJ9.vEL42r8zpJBaS7FC5_wlqD8zhY-Gn77qPHjhX5pFOAg.7qwiDaMvzfLJi_zaPBLG0P7OWZCduRDimrXXb72bGq4&dib_tag=se&qid=1753845298&refinements=p_4%3Aittromaa&s=apparel&sr=1-1&th=1" target="_blank" class="product-link" rel="noopener noreferrer">Shop on Amazon USA</a>
+        </div>
+      </div>
+
+      <!-- Product 5: Graceful Queen Yellow -->
+      <div class="product-card">
+        <img src="images/model5.jpg" alt="Graceful Queen Yellow Handbag" />
+        <div class="product-info">
+          <div class="product-title">'Graceful Queen' Handbag</div>
+          <div class="product-color">Yellow</div>
+          <a href="https://www.amazon.com/ittromaa-Graceful-Shoulder-Versatile-Crossbody/dp/B0DPZKV1YV/ref=sr_1_2?dib=eyJ2IjoiMSJ9.vEL42r8zpJBaS7FC5_wlqD8zhY-Gn77qPHjhX5pFOAg.7qwiDaMvzfLJi_zaPBLG0P7OWZCduRDimrXXb72bGq4&dib_tag=se&qid=1754280242&refinements=p_4%3Aittromaa&s=apparel&sr=1-2&th=1" target="_blank" class="product-link" rel="noopener noreferrer">Shop on Amazon USA</a>
+        </div>
+      </div>
+
+      <!-- Product 6: Graceful Queen Black -->
+      <div class="product-card">
+        <img src="images/model6.jpg" alt="Graceful Queen Black Handbag" />
+        <div class="product-info">
+          <div class="product-title">'Graceful Queen' Handbag</div>
+          <div class="product-color">Black</div>
+          <a href="https://www.amazon.com/ittromaa-Graceful-Shoulder-Versatile-Crossbody/dp/B0DPZFS1Z7/ref=sr_1_2?dib=eyJ2IjoiMSJ9.vEL42r8zpJBaS7FC5_wlqD8zhY-Gn77qPHjhX5pFOAg.7qwiDaMvzfLJi_zaPBLG0P7OWZCduRDimrXXb72bGq4&dib_tag=se&qid=1754280242&refinements=p_4%3Aittromaa&s=apparel&sr=1-2&th=1" target="_blank" class="product-link" rel="noopener noreferrer">Shop on Amazon USA</a>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <footer>...</footer>
+  <footer>
+    <p>&copy; 2024-2025 ittromaa. All rights reserved.</p>
+  </footer>
 </body>
 </html>
