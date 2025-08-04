@@ -1,27 +1,54 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lookbook | ittromaa</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Ittromaa Lookbook</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+    section { padding: 40px 20px; }
+    h2 { text-align: center; margin-bottom: 20px; }
+    .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+    .gallery img, .gallery video { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    video { width: 320px; }
+  </style>
 </head>
 <body>
-  <nav>...</nav>
 
-  <section class="content">
-    <h1>Lookbook</h1>
+  <!-- Section 1: Videos -->
+  <section id="videos">
+    <h2>Lookbook Videos</h2>
     <div class="gallery">
-      <img src="images/model1.jpg" alt="Model 1">
-      <img src="images/model2.jpg" alt="Model 2">
       <video controls>
-        <source src="videos/intro.mp4" type="video/mp4">
+        <source src="videos/video1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <video controls>
+        <source src="videos/video2.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
   </section>
 
-  <footer>...</footer>
+  <!-- Section 2: Models with Bags -->
+  <section id="models">
+    <h2>Models with Ittromaa Bags</h2>
+    <div class="gallery">
+      <img src="images/model1.jpg" alt="Model 1">
+      <img src="images/model2.jpg" alt="Model 2">
+      <img src="images/model3.jpg" alt="Model 3">
+      <img src="images/model4.jpg" alt="Model 4">
+    </div>
+  </section>
+
+  <!-- Section 3: Bag Description Photos -->
+  <section id="descriptions">
+    <h2>Bag Features & Descriptions</h2>
+    <div class="gallery">
+      <img src="images/bag_description1.jpg" alt="Bag Description 1">
+      <img src="images/bag_description2.jpg" alt="Bag Description 2">
+      <img src="images/bag_description3.jpg" alt="Bag Description 3">
+    </div>
+  </section>
+
 </body>
 </html>
