@@ -4,12 +4,59 @@
   <meta charset="UTF-8">
   <title>Ittromaa Lookbook</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
-    section { padding: 40px 20px; }
-    h2 { text-align: center; margin-bottom: 20px; }
-    .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-    .gallery img, .gallery video { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-    video { width: 320px; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #fff;
+      color: #333;
+    }
+
+    section {
+      padding: 40px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .box {
+      width: 45%;
+      max-width: 500px;
+      height: 300px;
+      overflow: hidden;
+      background: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .box img, .box video {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .box {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -17,36 +64,53 @@
   <!-- Section 1: Videos -->
   <section id="videos">
     <h2>Lookbook Videos</h2>
-    <div class="gallery">
-      <video controls>
-        <source src="videos/video1.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <video controls>
-        <source src="videos/video2.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+    <div class="grid">
+      <div class="box">
+        <video controls>
+          <source src="videos/video1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="box">
+        <video controls>
+          <source src="videos/video2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="box">
+        <video controls>
+          <source src="videos/video3.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="box">
+        <video controls>
+          <source src="videos/video4.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
   </section>
 
   <!-- Section 2: Models with Bags -->
   <section id="models">
     <h2>Models with Ittromaa Bags</h2>
-    <div class="gallery">
-      <img src="images/model1.jpg" alt="Model 1">
-      <img src="images/model2.jpg" alt="Model 2">
-      <img src="images/model3.jpg" alt="Model 3">
-      <img src="images/model4.jpg" alt="Model 4">
+    <div class="grid">
+      <div class="box"><img src="images/model1.jpg" alt="Model 1"></div>
+      <div class="box"><img src="images/model2.jpg" alt="Model 2"></div>
+      <div class="box"><img src="images/model3.jpg" alt="Model 3"></div>
+      <div class="box"><img src="images/model4.jpg" alt="Model 4"></div>
     </div>
   </section>
 
   <!-- Section 3: Bag Description Photos -->
   <section id="descriptions">
     <h2>Bag Features & Descriptions</h2>
-    <div class="gallery">
-      <img src="images/bag_description1.jpg" alt="Bag Description 1">
-      <img src="images/bag_description2.jpg" alt="Bag Description 2">
-      <img src="images/bag_description3.jpg" alt="Bag Description 3">
+    <div class="grid">
+      <div class="box"><img src="images/bag_description1.jpg" alt="Bag 1"></div>
+      <div class="box"><img src="images/bag_description2.jpg" alt="Bag 2"></div>
+      <div class="box"><img src="images/bag_description3.jpg" alt="Bag 3"></div>
+      <div class="box"><img src="images/bag_description4.jpg" alt="Bag 4"></div>
     </div>
   </section>
 
