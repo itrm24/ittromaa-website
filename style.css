@@ -1,147 +1,76 @@
-/* Base styling */
-body {
-  margin: 0;
-  font-family: 'Helvetica Neue', sans-serif;
-  color: #333;
-  background-color: #f9f9f9; /* off-white */
-}
-
-/* Navigation bar */
-nav {
-  background-color: #b8860b; /* dark gold */
-  padding: 1rem;
-}
-
-nav ul {
-  list-style: none;
+/* Lookbook layout */
+.grid {
   display: flex;
-  justify-content: center;
-  gap: 1.2rem;
-  margin: 0;
-  padding: 0;
   flex-wrap: wrap;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #000;
-}
-
-nav a.active {
-  color: #000;
-  text-decoration: underline;
-}
-
-/* Slideshow styling */
-.slideshow {
-  overflow: hidden;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
   margin: 0 auto;
-  max-width: 100%;
-  background-color: #fdfdfd;
   padding: 2rem 0;
 }
 
-.slide-track {
+.grid.two-col .box {
+  width: 45%;
+  max-width: 500px;
+  height: 300px;
+}
+
+.grid.three-col .box {
+  width: 30%;
+  max-width: 400px;
+  height: 300px;
+}
+
+.box {
+  overflow: hidden;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   display: flex;
-  animation: scroll 40s linear infinite;
-  gap: 2rem;
+  align-items: center;
+  justify-content: center;
 }
 
-.slide-track img {
-  height: 220px;
-  border-radius: 10px;
+.box img,
+.box video {
+  max-width: 100%;
+  max-height: 100%;
   object-fit: cover;
+  display: block;
+  cursor: pointer;
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+/* Lightbox effect */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
 }
 
-/* Brand and slogan */
-.brand-name {
-  font-size: 4rem;
-  font-weight: 800;
-  letter-spacing: 2px;
-  color: #b8860b; /* dark gold */
-  margin-bottom: 0.3rem;
-  text-align: center;
+.lightbox:target {
+  display: block;
 }
 
-.title {
-  color: #8c6d02; /* a bit darker gold */
-  font-size: 2rem;
-  text-align: center;
-  margin: 0 0 1rem;
+.lightbox-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80vh;
 }
 
-/* Content section */
-.content {
-  padding: 2rem;
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.cta-buttons a {
-  background: #000;
-  color: #fff;
-  padding: 0.8rem 1.2rem;
-  margin: 0.5rem;
-  border-radius: 5px;
+.close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: white;
+  font-size: 30px;
   text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.cta-buttons a:hover {
-  background: #f0c040;
-  color: #000;
-}
-
-/* Product section */
-.product-gallery {
-  text-align: center;
-  padding: 2rem;
-}
-
-.product-gallery h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #222;
-}
-
-.product {
-  display: inline-block;
-  margin: 1rem;
-}
-
-.product img {
-  width: 200px;
-  border-radius: 10px;
-}
-
-.product p {
-  margin-top: 0.5rem;
-  font-weight: 600;
-  color: #333;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #f5f5f5;
-  font-size: 0.9rem;
-  color: #666;
+  font-weight: bold;
 }
