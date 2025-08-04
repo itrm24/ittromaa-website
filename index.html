@@ -5,21 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ittromaa | Unravel Your Inner Style</title>
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Counter.dev Tracking Script -->
-  <script src="https://cdn.counter.dev/script.js" 
-          data-id="9af2f9c9-73a4-48f2-ba5f-551194d0207c" 
+  <script src="https://cdn.counter.dev/script.js"
+          data-id="9af2f9c9-73a4-48f2-ba5f-551194d0207c"
           data-utcoffset="-4"></script>
 
   <style>
-    /* Page background */
     body {
-      background-color: #f7f7f7; /* off-white/silver */
+      background-color: #f7f7f7;
+      margin: 0;
+      font-family: Arial, sans-serif;
     }
 
-    /* Navigation */
     nav {
-      background-color: #b8860b; /* golden color */
+      background-color: #b8860b;
       padding: 1rem 0;
     }
 
@@ -40,16 +38,12 @@
       transition: color 0.3s ease;
     }
 
-    nav a:hover {
-      color: #000;
-    }
-
+    nav a:hover,
     nav a.active {
-      text-decoration: underline;
       color: #000;
+      text-decoration: underline;
     }
 
-    /* Brand and slogan */
     .brand-name {
       font-size: 4rem;
       font-weight: 800;
@@ -65,10 +59,8 @@
       font-size: 2rem;
       text-align: center;
       margin: 0 0 1rem;
-      text-transform: none;
     }
 
-    /* Slideshow styling */
     .slideshow {
       overflow: hidden;
       margin: 0 auto 3rem;
@@ -88,7 +80,7 @@
       border-radius: 10px;
       object-fit: cover;
       user-select: none;
-      pointer-events: none;
+      cursor: pointer;
     }
 
     @keyframes scroll {
@@ -96,7 +88,11 @@
       100% { transform: translateX(-50%); }
     }
 
-    /* CTA Buttons */
+    .cta-buttons {
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+
     .cta-buttons a {
       background: #000;
       color: #fff;
@@ -104,7 +100,6 @@
       margin: 0.5rem;
       border-radius: 5px;
       text-decoration: none;
-      display: inline-block;
       font-weight: bold;
       transition: background-color 0.3s ease, color 0.3s ease;
     }
@@ -114,36 +109,72 @@
       color: #000;
     }
 
-    /* Product Gallery */
-    .product-gallery {
-      text-align: center;
+    /* Testimonials Scroller */
+    .testimonials {
+      overflow-x: auto;
+      display: flex;
+      gap: 1.5rem;
       padding: 2rem;
+      scroll-snap-type: x mandatory;
     }
 
-    .product-gallery h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-      color: #222;
+    .testimonial {
+      flex: 0 0 auto;
+      width: 300px;
+      scroll-snap-align: center;
+      position: relative;
+      transition: transform 0.3s ease;
     }
 
-    .product {
-      display: inline-block;
-      margin: 1rem;
+    .testimonial img {
+      width: 100%;
+      border-radius: 15px;
+      transition: transform 0.3s ease, filter 0.3s ease;
     }
 
-    .product img {
-      width: 200px;
+    .testimonials::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .testimonials::-webkit-scrollbar-thumb {
+      background: #b8860b;
       border-radius: 10px;
-      user-select: none;
     }
 
-    .product p {
-      margin-top: 0.5rem;
-      font-weight: 600;
-      color: #333;
+    .testimonial:hover img {
+      transform: scale(1.05);
+      filter: none;
+      z-index: 2;
     }
 
-    /* Footer */
+    .testimonial img:not(:hover) {
+      filter: grayscale(40%) blur(1px);
+    }
+
+    /* Modal for image zoom */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.85);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+
+    .modal:target {
+      display: flex;
+    }
+
     footer {
       text-align: center;
       padding: 1rem;
@@ -169,34 +200,22 @@
   <!-- Slideshow -->
   <section class="slideshow">
     <div class="slide-track">
-      <!-- Original 10 images -->
-      <img src="images/model1.jpg" alt="ittromaaBag1" />
-      <img src="images/model2.jpg" alt="ittromaaBag2" />
-      <img src="images/model3.jpg" alt="ittromaaBag3" />
-      <img src="images/model4.jpg" alt="ittromaaBag4" />
-      <img src="images/model5.jpg" alt="ittromaaBag5" />
-      <img src="images/model6.jpg" alt="ittromaaBag6" />
-      <img src="images/model7.jpg" alt="ittromaaBag7" />
-      <img src="images/model8.jpg" alt="ittromaaBag8" />
-      <img src="images/model9.jpg" alt="ittromaaBag9" />
-      <img src="images/model10.jpg" alt="ittromaaBag10" />
-
-      <!-- Repeat images for smooth infinite scroll -->
-      <img src="images/model1.jpg" alt="ittromaaBag1" />
-      <img src="images/model2.jpg" alt="ittromaaBag2" />
-      <img src="images/model3.jpg" alt="ittromaaBag3" />
-      <img src="images/model4.jpg" alt="ittromaaBag4" />
-      <img src="images/model5.jpg" alt="ittromaaBag5" />
-      <img src="images/model6.jpg" alt="ittromaaBag6" />
-      <img src="images/model7.jpg" alt="ittromaaBag7" />
-      <img src="images/model8.jpg" alt="ittromaaBag8" />
-      <img src="images/model9.jpg" alt="ittromaaBag9" />
-      <img src="images/model10.jpg" alt="ittromaaBag10" />
+      <!-- 10 images -->
+      <img src="images/model1.jpg" alt="Bag 1" onclick="openModal(this.src)" />
+      <img src="images/model2.jpg" alt="Bag 2" onclick="openModal(this.src)" />
+      <img src="images/model3.jpg" alt="Bag 3" onclick="openModal(this.src)" />
+      <img src="images/model4.jpg" alt="Bag 4" onclick="openModal(this.src)" />
+      <img src="images/model5.jpg" alt="Bag 5" onclick="openModal(this.src)" />
+      <img src="images/model6.jpg" alt="Bag 6" onclick="openModal(this.src)" />
+      <img src="images/model7.jpg" alt="Bag 7" onclick="openModal(this.src)" />
+      <img src="images/model8.jpg" alt="Bag 8" onclick="openModal(this.src)" />
+      <img src="images/model9.jpg" alt="Bag 9" onclick="openModal(this.src)" />
+      <img src="images/model10.jpg" alt="Bag 10" onclick="openModal(this.src)" />
     </div>
   </section>
 
-  <!-- Intro Section -->
-  <section class="content">
+  <!-- Intro -->
+  <section class="content" style="text-align:center; padding: 0 2rem;">
     <h1 class="brand-name">ittromaa</h1>
     <h2 class="title">Unravel Your Inner Style</h2>
     <p>
@@ -204,36 +223,52 @@
       designed in Canada, and made for the modern world.
     </p>
     <div class="cta-buttons">
-      <a href="https://www.amazon.com/s?rh=n%3A7141123011%2Cp_4%3Aittromaa&ref=bl_sl_s_sh_web_7141123011" target="_blank"
-        >Shop on Amazon USA</a
-      >
-      <a
-        href="https://www.amazon.ca/ittromaa-Timeless-Shoulder-Top-Handle-Crossbody/dp/B0DD2M8HH7/ref=sr_1_1?dib=eyJ2IjoiMSJ9.mR1u7UwzI8aH-coSQvfNeT8zhY-Gn77qPHjhX5pFOAg.Vj39VfjcGKLLU97KZEHoHiWatO_2F2iD5IyxnIFaEoI&dib_tag=se&qid=1753674051&refinements=p_4%3Aittromaa&s=shoes&sr=1-1&th=1"
-        target="_blank"
-        >Shop on Amazon Canada</a
-      >
+      <a href="https://www.amazon.com/s?rh=n%3A7141123011%2Cp_4%3Aittromaa&ref=bl_sl_s_sh_web_7141123011" target="_blank">Shop on Amazon USA</a>
+      <a href="https://www.amazon.ca/ittromaa-Timeless-Shoulder-Top-Handle-Crossbody/dp/B0DD2M8HH7" target="_blank">Shop on Amazon Canada</a>
     </div>
   </section>
 
-  <!-- Featured Products -->
+  <!-- Testimonials -->
   <section class="product-gallery">
-    <h2>Featured Bags</h2>
-    <div class="product">
-      <img src="images/model1.jpg" alt="ittromaaBag1" />
-      <p>Elegant Vegan Tote</p>
-    </div>
-    <div class="product">
-      <img src="images/model2.jpg" alt="ittromaaBag2" />
-      <p>Minimalist Crossbody</p>
-    </div>
-    <div class="product">
-      <img src="images/model3.jpg" alt="ittromaaBag3" />
-      <p>Chic Travel Bag</p>
+    <h2>Customer Love</h2>
+    <div class="testimonials">
+      <!-- Add up to 15 testimonial images -->
+      <div class="testimonial"><img src="images/feedbackimage1.jpg" alt="Testimonial 1" /></div>
+      <div class="testimonial"><img src="images/feedbackimage2.jpg" alt="Testimonial 2" /></div>
+      <div class="testimonial"><img src="images/feedbackimage3.jpg" alt="Testimonial 3" /></div>
+      <div class="testimonial"><img src="images/feedbackimage4.jpg" alt="Testimonial 4" /></div>
+      <div class="testimonial"><img src="images/feedbackimage5.jpg" alt="Testimonial 5" /></div>
+      <div class="testimonial"><img src="images/feedbackimage6.jpg" alt="Testimonial 6" /></div>
+      <div class="testimonial"><img src="images/feedbackimage7.jpg" alt="Testimonial 7" /></div>
+      <div class="testimonial"><img src="images/feedbackimage8.jpg" alt="Testimonial 8" /></div>
+      <div class="testimonial"><img src="images/feedbackimage9.jpg" alt="Testimonial 9" /></div>
+      <div class="testimonial"><img src="images/feedbackimage10.jpg" alt="Testimonial 10" /></div>
+      <div class="testimonial"><img src="images/feedbackimage11.jpg" alt="Testimonial 11" /></div>
+      <div class="testimonial"><img src="images/feedbackimage12.jpg" alt="Testimonial 12" /></div>
+      <div class="testimonial"><img src="images/feedbackimage13.jpg" alt="Testimonial 13" /></div>
+      <div class="testimonial"><img src="images/feedbackimage14.jpg" alt="Testimonial 14" /></div>
+      <div class="testimonial"><img src="images/feedbackimage15.jpg" alt="Testimonial 15" /></div>
     </div>
   </section>
 
   <footer>
     <p>&copy; 2024-2025 ittromaa. All rights reserved.</p>
   </footer>
+
+  <!-- Modal viewer -->
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <img id="modalImage" src="" alt="Zoomed" />
+  </div>
+
+  <script>
+    function openModal(src) {
+      document.getElementById('modalImage').src = src;
+      document.getElementById('imageModal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('imageModal').style.display = 'none';
+    }
+  </script>
 </body>
 </html>
